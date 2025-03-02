@@ -1,9 +1,10 @@
 version: '3.8'
 
 services:
-  dev-environment:
+  dev-env:
     build: .
-    container_name: my-dev-environment
+    container_name: dev-env
     volumes:
-      - ../projects:/root/projects
+      - ~/.ssh:/root/.ssh
+      - ../Projects:/root/Projects
     stdin_open: true
