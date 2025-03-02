@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  dev-environment:
+    build: .
+    container_name: my-dev-environment
+    volumes:
+      - ../projects:/root/projects
+    stdin_open: true

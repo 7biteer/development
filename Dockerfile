@@ -59,5 +59,8 @@ RUN bash -c "\
     poetry --version && \
     java -version && \
     gradle --version"
+
+# Expose optional port
+EXPOSE 3000
     
 CMD ["bash"]
