@@ -5,6 +5,5 @@ services:
     build: .
     container_name: dev-env
     volumes:
-      - ~/.ssh:/root/.ssh
       - ../Projects:/root/Projects
     stdin_open: true
