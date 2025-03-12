@@ -49,6 +49,9 @@ RUN curl -fsSL https://services.gradle.org/distributions/gradle-${GRADLE_VERSION
     unzip -d ${GRADLE_HOME} gradle.zip && \
     rm gradle.zip
 
+# Docker
+RUN apt update && apt install -y docker.io
+
 # Confirm installations (optional - for debugging purposes)
 RUN bash -c "\
     source $NVM_DIR/nvm.sh && \
@@ -58,7 +61,8 @@ RUN bash -c "\
     python3 --version && \
     poetry --version && \
     java -version && \
-    gradle --version"
+    gradle --version \
+    docker --version"
 
 # Expose optional port
 EXPOSE 3000

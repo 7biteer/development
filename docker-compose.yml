@@ -1,4 +1,4 @@
-version: '3.8'
+version: "3.8"
 
 services:
   dev-env:
@@ -6,4 +6,5 @@ services:
     container_name: dev-env
     volumes:
       - ../Projects:/root/Projects
+      - /var/run/docker.sock:/var/run/docker.sock
     stdin_open: true

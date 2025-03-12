@@ -1,6 +1,6 @@
 # Start
 
-`docker-compose up --build`
+`docker-compose up -d --build`
 
 # Generate SSH Key
 
