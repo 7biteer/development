@@ -5,6 +5,7 @@ services:
     build: .
     container_name: dev-env
     volumes:
+      - ~/.ssh:/root/.ssh
       - ../Projects:/root/Projects
       - /var/run/docker.sock:/var/run/docker.sock
     stdin_open: true
